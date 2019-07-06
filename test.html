@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="FastJSON.js"></script>
+    <script>
+        function formatFastJSON() {
+            let a = "{\"b2\":{\"c\":{\"b\":{\"$ref\":\"..\"}}},\"aaa\":{\"aab\":{\"aac\":{\"aad\":{\"aae\":{\"aaf\":{\"aaa\":{\"$ref\":\"$.aaa\"},\"c\":{\"$ref\":\"$.b2.c\"}}}}}}},\"a\":\"a\",\"b\":{\"$ref\":\"$.b2\"},\"this\":{\"$ref\":\"@\"}}";
+            let fastJson=new FastJSON();
+            let b=fastJson.format(a);
+            console.log(b);
+        }
+    </script>
+
+</head>
+<body onload="formatFastJSON()">
+
+</body>
+</html>
